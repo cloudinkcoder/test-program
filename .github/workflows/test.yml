@@ -6,23 +6,22 @@ on:
 jobs:
   test:
     # 动态命名任务，方便在 PR 检查面板中区分架构
-    name: Test (${{ matrix.arch }})
-    runs-on: ${{ matrix.runner }}
+    name: Test (${{ matrix.target }})
+    runs-on: ${{ matrix.os }}
 
     strategy:
       # 建议设为 false，防止一个架构失败导致另一个架构的测试被强制取消
       fail-fast: false
       matrix:
         include:
-          - arch: amd64
-            runner: ubuntu-latest
-          - arch: arm64
-            runner: ubuntu-26.04-arm
-          - arch: arm64
-            runner: macos-latest
+          - target: amd64-linux
+            os: ubuntu-latest
+          - target: aarch64-linux
+            os: ubuntu-26.04-arm
+          - target: aarch64-macos
+            os: macos-latest
 
     steps:
       - name: Verify Architecture
         run: |
           echo "Current Architecture: $(uname -m)"
-          echo "Matrix Target: ${{ matrix.arch }}"
