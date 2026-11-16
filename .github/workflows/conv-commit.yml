@@ -14,4 +14,4 @@ jobs:
   conv-commit:
     permissions:
       pull-requests: read
-    uses: ${{ github.repository_owner }}/tools/.github/workflows/conv-commit.yml@main
+    uses: cloudinkcoder/tools/.github/workflows/conv-commit.yml@main
