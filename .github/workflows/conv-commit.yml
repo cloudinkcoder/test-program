@@ -1,7 +1,6 @@
 name: "Conventional commits"
 
 on:
-  workflow_call: {}
   pull_request:
     types:
       - opened
@@ -13,28 +12,6 @@ permissions: {}
 
 jobs:
   conv-commit:
-    name: Validate PR title
-    runs-on: ubuntu-latest
     permissions:
-      pull-requests: read # to read the pull request title
-    steps:
-      - uses: amannn/action-semantic-pull-request@v6
-        id: lint_pr_title
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          types: |
-            fix
-            feat
-            build
-            ci
-            chore
-            docs
-            drop
-            edit
-            perf
-            polish
-            refactor
-            revert
-            style
-            tests
+      pull-requests: read
+    uses: ${{ github.repository_owner }}/tools/.github/workflows/conv-commit.yml@main
