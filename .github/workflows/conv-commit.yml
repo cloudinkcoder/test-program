@@ -1,4 +1,4 @@
-name: Conventional commits
+name: Conventional commit
 
 on:
   pull_request:
