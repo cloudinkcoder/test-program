@@ -14,4 +14,4 @@ jobs:
   conv-commit:
     permissions:
       pull-requests: read
-    uses: cloudinkcoder/tools/.github/workflows/conv-commit.yml@main
+    uses: ac2learn/workflows/.github/workflows/conv-commit.yml@main
