@@ -4,7 +4,7 @@ on: pull_request
 
 jobs:
   call-auto-merge:
-    uses: ac2learn/workflows/.github/workflows/auto-merge-dependabot.yml@main
+    uses: ac2learn/workflows/.github/workflows/auto-merge-dependabot-prs.yml@main
     with:
       pr_url: ${{ github.event.pull_request.html_url }}
       pr_author: ${{ github.event.pull_request.user.login }}
