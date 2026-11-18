@@ -60,7 +60,7 @@ jobs:
           omitBodyDuringUpdate: true
       - name: Upload Artifact
         if: inputs.save_path == 'artifact'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: my-artifact
           path: ${{ github.workspace }}/*.tar.gz
