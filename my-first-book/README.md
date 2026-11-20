@@ -1,5 +1,7 @@
 ## Web Book
 
+Use `mdbook` to build web book
+
 ### Run in Local
 
 mdbook 默认只监听 localhost (即 WSL2 内部的 127.0.0.1), 而 WSL2 与 Windows 宿主机处于不同的网络栈, Windows 的浏览器无法直接访问这个内部地址
