@@ -3,6 +3,14 @@ name: amd64
 on:
   workflow_dispatch:
     inputs:
+      from_registry:
+        description: "Default Docker Hub"
+        requiredL: true
+        default: "Docker Hub"
+        type: choice
+        options:
+          - Docker Hub
+          - GitHub Container Registry
       save_path:
         description: "less than 2GB use release, and other use artifact"
         required: true
