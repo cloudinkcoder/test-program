@@ -14,4 +14,4 @@ jobs:
   conv-commit:
     permissions:
       pull-requests: read
-    uses: ac2learn/workflows/.github/workflows/conv-commit.yml@main
+    uses: ac2learn/tools/.github/workflows/reusable-conv-commit.yml@main
