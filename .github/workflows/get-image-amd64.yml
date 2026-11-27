@@ -1,4 +1,4 @@
-name: amd64
+name: Get Image (amd64)
 
 on:
   workflow_dispatch:
